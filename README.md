@@ -12,7 +12,7 @@ We built this project to practice more and dive more into Node.js and the back-e
 # Team Work
 
 * Bushra Shwiki
-* May Darwish
+* May Darawshi
 * Khaled Badarna
 * Jihad Bana
 
