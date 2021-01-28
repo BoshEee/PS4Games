@@ -1,3 +1,4 @@
+
 # PS4 Games
 
 PS gamers, now you can search and find and know more about ps4 exclusives to know more, read more about each game! 
@@ -19,3 +20,4 @@ We built this project to practice more and dive more into Node.js and the back-e
 # Resources & Useful Links
 
 * [JSON Files](https://www.w3schools.com/js/js_json.asp)
+
