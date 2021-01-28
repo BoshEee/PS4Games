@@ -1,7 +1,6 @@
 # PS4 Games
 
 PS gamers, now you can search and find and know more about ps4 exclusives to know more, read more about each game! 
-"You can find our top 10 PlayStation exclusives in the home page "
 
 Check it out !
 
