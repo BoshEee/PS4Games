@@ -11,7 +11,7 @@ function searchHandler(req, response) {
       response.end("<h1> Not Found </h1>");
     } else {
       response.writeHead(200, { "content-type": "application/json" });
-      response.end(file);
+      response.end(JSON.stringify(file));
     }
   });
 }
