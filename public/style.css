@@ -28,3 +28,7 @@ width: 200px;
 border: none;
 margin-top: 15px;
 }
+
+.output {
+    padding: 5px 18px;
+}
