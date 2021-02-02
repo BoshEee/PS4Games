@@ -1,1 +1,1 @@
-web : server.js
+web: CI='' node server.js
