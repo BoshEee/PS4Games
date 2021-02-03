@@ -1,34 +1,32 @@
 body {
-    background-color: rgb(51, 51, 51);
-    color : white
-    
+  background-color: rgb(51, 51, 51);
+  color: white;
 }
-
+:root {
+  --bg-color: #173f5f;
+  --bg-sec-color: #20639b;
+  --sec-color: #3caea3;
+  --yelow: #f6d55c;
+  --hdr-color: #ed553b;
+}
 form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 label {
-    font-weight: bold;
-    margin: 15px;
+  font-weight: bold;
+  margin: 15px;
 }
 
 #search-input {
-    padding: 5px 18px;
-    width: 250px;
-    border: none;
+  padding: 5px 18px;
+  width: 250px;
+  border: none;
 }
-
-button {
-padding: 5px 18px;
-width: 200px;
-border: none;
-margin-top: 15px;
-}
-
-.output {
-    padding: 5px 18px;
+.poster {
+  width: 350px;
+  height: 450px;
 }
