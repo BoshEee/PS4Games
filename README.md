@@ -21,7 +21,7 @@ We built this project to practice more and dive more into Node.js and the back-e
 * Bushra Shwiki
 * May Darawshi
 * Khaled Badarna
-* Jihad Bana
+* Jihad Banna
 
 # Resources & Useful Links
 
