@@ -11,7 +11,8 @@ Check it out !
 We built this project to practice more and dive more into Node.js and the back-end web. So, this project done with html, css, javascript and node.js.
 
 # Diagram
- ![](https://i.imgur.com/YrUD0li.png)
+![](https://i.imgur.com/Qn4Dxm1.png)
+
 
  
 
