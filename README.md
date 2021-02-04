@@ -10,6 +10,10 @@ Check it out !
 
 We built this project to practice more and dive more into Node.js and the back-end web. So, this project done with html, css, javascript and node.js.
 
+# Notes :
+1. Website is not responsive. (soon)
+2. There is commented code we want to use it later.
+
 # Diagram
 ![](https://i.imgur.com/Qn4Dxm1.png)
 
