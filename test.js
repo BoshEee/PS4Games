@@ -1,6 +1,9 @@
 const router = require("./router");
 const test = require("tape");
 const supertest = require("supertest");
+
+//  We will use those comments later 
+
 // const nock = require("nock");
 
 // const firstTest = nock('https://ps4gamesapinodejs.herokuapp.com/')
