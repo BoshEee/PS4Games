@@ -6,7 +6,7 @@ const dataList = document.getElementById("nameResults");
 const searchBtn = document.querySelector(".subBtn");
 const homepage = document.querySelector(".homePage");
 const screenshotsBox = document.querySelector(".screenshots");
-// Indo Section
+// Info Section
 const info = document.querySelector(".info");
 const title = document.querySelector("#title");
 const genres = document.querySelector("#genres");
@@ -89,62 +89,3 @@ function getinfo(event) {
       });
   }
 }
-// Selectors For The Genre Section
-let genreDiv = document.querySelector(".genre");
-let actionSec = document.querySelector(".Action");
-let horrorSec = document.querySelector(".Horror");
-let ShooterSec = document.querySelector(".Shooter");
-
-// Getting Games By Genres
-function getByGenre() {
-  let genreArray = ["Action", "Horror", "Shooter"];
-
-  fetch(`/search/?genre=`)
-    .then((response) => {
-      if (!response.ok) throw new Error(response.status);
-      return response.json();
-    })
-    .then((result) => {
-      console.log(result.games.length);
-      for (let i = 0; i < 9; i++) {
-        if (result.games[i].genres.includes(genreArray[0])) {
-          // Action
-          const poster = document.createElement("img");
-          const title = document.createElement("i");
-
-          poster.src = result.games[i].images;
-          poster.classList.add("poster");
-          title.innerText = result.games[i].name;
-
-          actionSec.appendChild(poster);
-          actionSec.appendChild(title);
-        } else if (result.games[i].genres.includes(genreArray[1])) {
-          // Horror
-          const poster = document.createElement("img");
-          const title = document.createElement("i");
-
-          poster.src = result.games[i].images;
-          poster.classList.add("poster");
-          title.innerText = result.games[i].name;
-
-          horrorSec.appendChild(poster);
-          horrorSec.appendChild(title);
-        } else {
-          const poster = document.createElement("img");
-          const title = document.createElement("i");
-
-          poster.src = result.games[i].images;
-          poster.classList.add("poster");
-          title.innerText = result.games[i].name;
-
-          shooterSec.appendChild(poster);
-          shooterSec.appendChild(title);
-        }
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
-
-// getByGenre();

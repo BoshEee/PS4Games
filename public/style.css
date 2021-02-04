@@ -193,26 +193,6 @@ a:hover {
   margin-top: 50px;
   width: 800px;
 }
-
-/* Genre 
-.genre {
-  display: flex;
-  flex-direction: column;
-}
-section {
-  width: 900px;
-  max-width: 900px;
-  display: flex;
-  flex-direction: row;
-}
-section > i {
-  width: 200px;
-  color: var(--yelow);
-}
-.poster {
-  width: 250px;
-  height: 370px;
-}*/
 footer {
   width: 900px;
   background-color: var(--bg-sec-color);
