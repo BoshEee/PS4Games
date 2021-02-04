@@ -53,7 +53,6 @@ function getinfo(event) {
     alert("You Need To Type A Game Name");
   } else {
     let game = searchInput.value;
-    console.log("btn : " + game);
 
     fetch(`/ps4/?name=${game}`)
       .then((response) => {
@@ -81,7 +80,6 @@ function getinfo(event) {
             screenshots.src = result[0].screenshots[i];
             screenshotsBox.appendChild(screenshots);
           }
-          console.log("name : " + result[0].genres);
         }
       })
       .catch((error) => {
