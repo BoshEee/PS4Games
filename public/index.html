@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="public/img/favico.png" />
     <link rel="stylesheet" href="public/style.css" />
     <title>PS4 Games</title>
-</head>
-
-<body>
-    <form>
-        <label for="search-input"> Search Any PS4 Video Game :  </label>
-        <input type="text" id="search-input" list="nameResults" autocomplete="off">
+  </head>
+  <header>
+    <h1>GAMERS YARD</h1>
+    <br />
+    <nav>
+      <i><a href="/">HOME</a></i>
+      <i><a href="about">ABOUT US</a></i>
+      <div class="searchDiv">
+        <input
+          type="text"
+          id="search-input"
+          list="nameResults"
+          placeholder="search..."
+        />
         <datalist id="nameResults"></datalist>
         <button type="submit" class="subBtn">SMASH!</button>
-    </form>
-    <div class="info">
-        <h3 id="title">Title :</h3>
-        <img src="#" alt="poster" id="poster" />
-        <h3 id="genres">Genres :</h3>
-        <h3><a href="/" style="background-color:#c0c0b1"> Return Home </a></h3>
-    </div>
-    <script src="public/index.js"></script>
-</body>
+      </div>
+    </nav>
+  </header>
 
+  <body>
+    <div class="homePage">
+      <h1>Welcome</h1>
+      <i>
+        To the best yard for gamers and game developers! Here you can search for
+        any game you like to know more about</i
+      >
+    </div>
+
+
+    <!-- Display More About The Game -->
+    <div class="info">
+      <h3 id="title">Title :</h3>
+      <img src="#" alt="poster" id="poster" />
+      <h3 id="genres">Genres :</h3>
+      <h3 id="price">Price :</h3>
+      <h3 id="release">Release :</h3>
+      <h3 id="summary">Summary :</h3>
+    </div>
+
+    <div class="screenshots"></div>
+
+    <script src="public/index.js"></script>
+  </body>
+
+  <footer>Copyright 2021</footer>
 </html>
