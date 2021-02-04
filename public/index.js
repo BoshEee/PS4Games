@@ -106,7 +106,7 @@ function getByGenre() {
     })
     .then((result) => {
       console.log(result.games.length);
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 9; i++) {
         if (result.games[i].genres.includes(genreArray[0])) {
           // Action
           const poster = document.createElement("img");
@@ -116,8 +116,29 @@ function getByGenre() {
           poster.classList.add("poster");
           title.innerText = result.games[i].name;
 
-          // actionSec.appendChild(poster);
-          // actionSec.appendChild(title);
+          actionSec.appendChild(poster);
+          actionSec.appendChild(title);
+        } else if (result.games[i].genres.includes(genreArray[1])) {
+          // Horror
+          const poster = document.createElement("img");
+          const title = document.createElement("i");
+
+          poster.src = result.games[i].images;
+          poster.classList.add("poster");
+          title.innerText = result.games[i].name;
+
+          horrorSec.appendChild(poster);
+          horrorSec.appendChild(title);
+        } else {
+          const poster = document.createElement("img");
+          const title = document.createElement("i");
+
+          poster.src = result.games[i].images;
+          poster.classList.add("poster");
+          title.innerText = result.games[i].name;
+
+          shooterSec.appendChild(poster);
+          shooterSec.appendChild(title);
         }
       }
     })
@@ -126,4 +147,4 @@ function getByGenre() {
     });
 }
 
-getByGenre();
+// getByGenre();
