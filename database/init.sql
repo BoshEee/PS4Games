@@ -1,5 +1,6 @@
 BEGIN;
-/* DROP TABLE IF EXISTS users, bolg_posts CASCADE; */
+
+DROP TABLE IF EXISTS users, games, blog, comments, blog_posts CASCADE; 
 
 CREATE TABLE users (
   user_id SERIAL PRIMARY KEY,
