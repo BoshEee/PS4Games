@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="public/img/favico.png" />
+    <link rel="stylesheet" href="public/style.css" />
+    <title>PS4 Games</title>
+</head>
+<header>
+    <h1>GAMERS YARD</h1>
+    <br />
+    <nav>
+        <i><a href="/">HOME</a></i>
+        <i><a href="about">ABOUT US</a></i>
+        <div class="searchDiv">
+            <input type="text" id="search-input" list="nameResults" placeholder="search..." autocomplete="off" />
+            <datalist id="nameResults"></datalist>
+            <button type="submit" class="subBtn">SMASH!</button>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="signUp">
+        <h1>Sign Up</h1>
+        <form action="/signup" method="post">
+
+            <label>User name</label>
+            <input type="text" id="username" name="user_name" required>
+            <label>Password</label>
+            <input type="password" id="password" name="user_pass" required>
+            <button type="submit">SignUp</button>
+
+
+
+        </form>
+    </div>
+
+
+
+
+    <script src="public/index.js"></script>
+</body>
+
+<footer>Copyright 2021</footer>
+
+</html>
