@@ -36,4 +36,12 @@ CREATE TABLE comments (
     comment_text TEXT
 );
 
+INSERT INTO users (user_name, user_pass, role) VALUES
+  ('Khaled', 123421, 'user'),
+  ('Bushra', 9876789, 'user'),
+  ('May', 41114, 'user'),
+  ('Jihad', 727272, 'user')
+  
+;
+
 COMMIT;
