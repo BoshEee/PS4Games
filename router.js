@@ -4,7 +4,9 @@ const publicHandler = require("./Handlers/public");
 const searchHandler = require("./Handlers/search");
 const aboutHandler = require("./Handlers/aboutus");
 const signUpHandler = require("./Handlers/signUpHandler");
+const blogHandler = require("./Handlers/blog");
 const gameInfo = require("./Handlers/gameInfo");
+
 
 function router(request, response) {
     const url = request.url;
@@ -27,8 +29,13 @@ function router(request, response) {
         gameInfo.gameInfo(request, response);
     } else if (url.includes("/gameInfo") && request.method === "POST") {
         gameInfo.PostComment(request, response);
+    } else if (url.includes("blog")) {
+        blogHandler.blogPage(request, response);
+    } else if (url.includes("feed")) {
+        blogHandler.showPosts(request, response);
     } else {
         missingHandler(request, response);
+
     }
 }
 
