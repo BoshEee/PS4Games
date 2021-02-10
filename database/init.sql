@@ -45,6 +45,12 @@ INSERT INTO users (user_name, user_pass, role) VALUES
   ('Jihad', 727272, 'user')
   
 ;
+INSERT INTO comments (comment_text) VALUES
+  ('Hello World')
+  
+;
+SELECT * From comments;
+
 
 INSERT INTO games (title, genres, price, release_date, rate,game_summa, poster, screenshots) VALUES
      ('The Last Of Us 2', '["Action", "Adventure"]', '$59.99', '06-19-2020', '9.5', 'Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming. Living amongst a thriving community of survivors has allowed them peace and stability, despite the constant threat of the infected and other, more desperate survivors. When a violent event disrupts that peace, Ellie embarks on a relentless journey to carry out justice and find closure. As she hunts those responsible one by one, she is confronted with the devastating physical and emotional repercussions of her actions' ,'https://cdn.europosters.eu/image/1300/posters/the-last-of-us-2-ellie-i76718.jpg','["https://images.hive.blog/DQma2kAk1M1hQar7RrPafrgzvRDk8gdL4rBgm22vk5fcCBg/maxresdefault.jpg",
@@ -159,5 +165,7 @@ INSERT INTO games (title, genres, price, release_date, rate,game_summa, poster, 
       ]')
 
 ;
+
+
 
 COMMIT;
