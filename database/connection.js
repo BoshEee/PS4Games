@@ -13,4 +13,6 @@ const db = new pg.Pool({ connectionString });
 
 // db.query("SELECT * FROM USERS").then((result) => console.log(result.rows));
 
+db.query("SELECT * FROM comments").then((result) => console.log(result.rows));
+
 module.exports = db;

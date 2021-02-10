@@ -1,19 +1,44 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="public/img/favico.png" />
+    <link rel="stylesheet" href="public/style.css" />
+    <title>PS4 Games</title>
 </head>
+<header>
+    <h1>GAMERS YARD</h1>
+    <br />
+    <nav>
+        <i><a href="/">HOME</a></i>
+        <i><a href="about">ABOUT US</a></i>
+        <div class="searchDiv">
+            <input type="text" id="search-input" list="nameResults" placeholder="search..." autocomplete="off" />
+            <datalist id="nameResults"></datalist>
+            <button type="submit" class="subBtn">SMASH!</button>
+        </div>
+    </nav>
+</header>
+ç
 
 <body>
-    <div class="info">
+    <center><div class="info">
         <h3 id="title">Title :</h3>
         <img src="#" alt="poster" id="poster" />
         <h3 id="genres">Genres :</h3>
     </div>
-    <script src="public/gameInfo.js"></script>
+
+    <form  action="/gameInfo" method="post">
+        <label>Add a Comment Here</label>
+    <input type="text"  id="commenttext" name="comment_text"></input>
+    <button type="submit">Post my Comment</button>
+    
+    <output></output>
+    </form></center>
+ 
 </body>
 
-</html> -->
+
+</html>

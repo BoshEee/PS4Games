@@ -32,12 +32,12 @@ searchInput.addEventListener("keyup", (event) => {
       if (result.length > 1) {
         for (let i = 0; i <= result.length - 1; i++) {
           const opt = document.createElement("option");
-          opt.innerHTML = `<option value="${result[i].name}" />`;
+          opt.innerHTML = `<option value="${result[i].title}" />`;
           dataList.appendChild(opt);
         }
       } else {
         const opt = document.createElement("option");
-        opt.innerHTML = `<option value="${result.name}" />`;
+        opt.innerHTML = `<option value="${result[0].title}" />`;
         dataList.appendChild(opt);
       }
     })
@@ -91,9 +91,3 @@ function getinfo(event) {
       });
   }
 }
-
-const gameList = document.querySelector(".games");
-
-const gamesQ = require("../Handlers/modulesQuery/getAllGames");
-
-gameList.appendChild(gamesQ);
