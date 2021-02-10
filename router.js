@@ -4,6 +4,7 @@ const publicHandler = require("./Handlers/public");
 const searchHandler = require("./Handlers/search");
 const aboutHandler = require("./Handlers/aboutus");
 const signUpHandler = require("./Handlers/signUpHandler");
+const blogHandler = require("./Handlers/blog");
 
 
 
@@ -21,6 +22,8 @@ function router(request, response) {
         signUpHandler.signUpHandler(request, response);
     } else if (url.includes("/signup") && request.method === "POST") {
         signUpHandler.createUser(request, response);
+    } else if (url.includes("blog")) {
+        blogHandler(request, response);
     } else if (url.includes("about")) {
         aboutHandler(request, response);
     } else {
