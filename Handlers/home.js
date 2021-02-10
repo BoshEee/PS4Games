@@ -1,5 +1,5 @@
-const fs = require("fs");
 const path = require("path");
+const fs = require("fs");
 
 function homeHandler(request, response) {
   const filePath = path.join(__dirname, "..", "public", "index.html");

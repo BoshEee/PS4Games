@@ -91,3 +91,9 @@ function getinfo(event) {
       });
   }
 }
+
+const gameList = document.querySelector(".games");
+
+const gamesQ = require("../Handlers/modulesQuery/getAllGames");
+
+gameList.appendChild(gamesQ);
