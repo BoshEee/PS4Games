@@ -218,7 +218,14 @@ INSERT INTO users (user_name, user_pass, role) VALUES
   
 ;
 
+INSERT INTO blog (user_id, blog_title, blog_dec, post_body, tags) VALUES 
 
+('1', 'Nice website', 'Well done', 'Nice design', 'general'),
+('4', 'Nice Game', 'Well done', 'Nice design', 'games'),
+('2', 'Level 4', 'Well done', 'Nice design', 'questions'),
+('3', 'codm question', 'Well done', 'Nice design', 'questions')
+
+;
 
 INSERT INTO games (title, genres, price, release_date, rate, game_summa, poster, screenshots) VALUES
      ('The Last Of Us 2', 
