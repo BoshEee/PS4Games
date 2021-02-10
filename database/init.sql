@@ -36,4 +36,5 @@ CREATE TABLE comments (
     comment_text TEXT
 );
 
+
 COMMIT;
