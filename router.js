@@ -2,7 +2,6 @@ const homeHandler = require("./Handlers/home");
 const missingHandler = require("./Handlers/missing");
 const publicHandler = require("./Handlers/public");
 const searchHandler = require("./Handlers/search");
-const getByGenreHandler = require("./Handlers/getByGenre");
 const aboutHandler = require("./Handlers/aboutus");
 const signUpHandler = require("./Handlers/signUpHandler");
 
@@ -16,9 +15,8 @@ function router(request, response) {
     } else if (url.includes("public")) {
         publicHandler(request, response);
     } else if (url.includes("/ps4")) {
+        console.log("CHECK")
         searchHandler(request, response);
-    } else if (url.includes("/search")) {
-        getByGenreHandler(request, response);
     } else if (url.includes("/signup") && request.method === "GET") {
         signUpHandler.signUpHandler(request, response);
     } else if (url.includes("/signup") && request.method === "POST") {
