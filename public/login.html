@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="public/img/favico.png" />
     <link rel="stylesheet" href="public/style.css" />
-    <title>Sign Up</title>
+    <title>PS4 Games</title>
   </head>
   <header>
     <h1>GAMERS YARD</h1>
@@ -31,16 +31,18 @@
 
   <body>
     <div class="signIn">
-      <h1>Sign Up</h1>
-      <form action="/signup" method="post">
+      <h1>Login</h1>
+      <form action="/login" method="post">
         <label>Username</label>
         <input type="text" id="username" name="user_name" required />
         <label>Password</label>
         <input type="password" id="password" name="user_pass" required />
-        <i> Already have an account? <a href="/signin">Login</a></i>
-        <button type="submit">SignUp</button>
+        <i>Need an account? <a href="signup">Sign Up</a></i>
+        <i id="error"></i>
+        <button type="submit">Sign In</button>
       </form>
     </div>
+    <script src="public/src/usersArea.js"></script>
   </body>
 
   <footer>Copyright 2021</footer>

@@ -9,7 +9,10 @@ if (process.env.NODE_ENV === "production") {
   connectionString = process.env.DATABASE_URL;
 }
 
-const db = new pg.Pool({ connectionString });
+const db = new pg.Pool({
+  connectionString,
+  ssl: { rejectUnauthorized: false },
+});
 
 // db.query("SELECT * FROM USERS").then((result) => console.log(result.rows));
 

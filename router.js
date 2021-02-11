@@ -6,12 +6,14 @@ const aboutHandler = require("./Handlers/aboutus");
 const signUpHandler = require("./Handlers/signUpHandler");
 const blogHandler = require("./Handlers/blog");
 const gameInfo = require("./Handlers/gameInfo");
+const loginHandler = require("./Handlers/login");
+const signinHandler = require("./Handlers/signin");
 
 function router(request, response) {
   const url = request.url;
 
   if (url === "/") {
-    homeHandler(request, response);
+    homeHandler.homeHandler(request, response);
   } else if (url.includes("public")) {
     publicHandler(request, response);
   } else if (url.includes("/ps4")) {
@@ -32,6 +34,12 @@ function router(request, response) {
     blogHandler.blogPage(request, response);
   } else if (url.includes("feed")) {
     blogHandler.showPosts(request, response);
+  } else if (url.includes("getGames")) {
+    homeHandler.gamesHome(request, response);
+  } else if (url.includes("login")) {
+    loginHandler.loginHandler(request, response);
+  } else if (url.includes("signin")) {
+    signinHandler(request, response);
   } else {
     missingHandler(request, response);
   }

@@ -66,9 +66,9 @@ function getinfo(event) {
         if (result.length == 0) {
           alert("Sorry, Game Not Found");
         } else {
-          homepage.style.display = "none";
-          screenshotsBox.innerHTML = "";
-          info.style.display = "grid";
+          // homepage.style.display = "none";
+          // screenshotsBox.innerHTML = "";
+          // info.style.display = "grid";
           title.textContent = result[0].name;
           genres.textContent = "Genres : " + result[0].genres;
           poster.src = result[0].images;
@@ -91,3 +91,20 @@ function getinfo(event) {
       });
   }
 }
+
+function showGames() {
+  fetch(`getGames`)
+    .then((response) => {
+      if (!response.ok) throw new Error(response.status);
+      return response.json();
+    })
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
+      alert("Oops, something went wrong !");
+    });
+}
+
+// showGames();

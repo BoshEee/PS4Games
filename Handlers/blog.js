@@ -1,6 +1,6 @@
-const db = require("../database/connection");
 const fs = require("fs");
 const path = require("path");
+const db = require("../database/connection");
 
 function blogPage(request, response) {
   const filePath = path.join(__dirname, "..", "public", "blog.html");
@@ -16,16 +16,23 @@ function blogPage(request, response) {
   });
 }
 
-function showPosts(req, response) {
-  db.query(`SELECT * FROM blog`)
-    .then((result) => {
-      response.end(JSON.stringify(result.rows));
-    })
-    .catch((e) => {
-      response.writeHead(200, { "content-type": "text/html" });
-      response.end(`<h1>Something went wrong \n ${e.message}</h1>`);
-      console.log(e);
-    });
+function showPosts(request, response) {
+  let body = "";
+  request.on("data", (chunk) => (body += chunk));
+  request.on("end", () => {
+    return db
+      .query("SELECT * FROM blog")
+
+      .then((result) => {
+        response.writeHead(200, { "content-type": "application/json" });
+        response.end(JSON.stringify(result.rows));
+      })
+      .catch((error) => {
+        console.log(error);
+        response.writeHead(500, { "content-type": "text/html" });
+        response.end(`<h1>WOOOOOOO</h1>`);
+      });
+  });
 }
 
 module.exports = { showPosts, blogPage };
