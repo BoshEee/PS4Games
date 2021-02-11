@@ -7,7 +7,7 @@ fetch(`feed`)
   })
   .then((result) => {
     console.log(result);
-    for (let i = 0; i <= result.length; i++) {
+    for (let i = 0; i <= result.length - 1; i++) {
       let postDiv = document.createElement("div");
       let postTitle = document.createElement("h3");
       let postBody = document.createElement("p");
