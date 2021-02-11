@@ -3,12 +3,19 @@
 
 PS gamers, now you can search and find and know more about ps4 exclusives to know more, read more about each game! 
 
-
+[App Docs](https://docs.google.com/document/d/17Qlv56IbI3pAg8zyGiG-lsYckieECJIB3ce90M1SYdM/edit?usp=sharing)
 Check it out !
 
-# How? & Why?
+# Why?
 
 We built this project to practice more and dive more into Node.js and the back-end web. So, this project done with html, css, javascript and node.js.
+# How?
+
+1. run npm install
+2. wsl
+3. sudo service postgresql start
+4. psql
+5. npm start
 
 # Notes :
 1. Website is not responsive. (soon)
@@ -17,8 +24,10 @@ We built this project to practice more and dive more into Node.js and the back-e
 # Diagram
 ![](https://i.imgur.com/Qn4Dxm1.png)
 
-
- 
+# Feature To Add :
+1. Admins Panel
+2. Users can comment on games and blogs
+3. Users can create blogs
 
 # Team Work
 
