@@ -6,9 +6,16 @@ PS gamers, now you can search and find and know more about ps4 exclusives to kno
 
 Check it out !
 
-# How? & Why?
+# Why?
 
 We built this project to practice more and dive more into Node.js and the back-end web. So, this project done with html, css, javascript and node.js.
+# How?
+
+1. run npm install
+2. wsl
+3. sudo service postgresql start
+4. psql
+5. npm start
 
 # Notes :
 1. Website is not responsive. (soon)
