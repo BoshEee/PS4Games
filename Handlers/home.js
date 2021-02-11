@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const missingHandler = require("./missing");
-const { getAllGames } = require("../database/modules");
+const db = require("../database/connection");
 
 function homeHandler(request, response) {
   const filePath = path.join(__dirname, "..", "public", "index.html");
