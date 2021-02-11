@@ -33,6 +33,7 @@ form.addEventListener("submit", function (event) {
     fetch(apiurl)
       .then((response) => {
         if (!response.ok) throw new Error(response.status);
+        alert(`Welcome Back ${username.value}`);
         window.location.href = "/";
       })
       .catch((err) => {

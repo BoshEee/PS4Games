@@ -44,7 +44,7 @@ searchInput.addEventListener("keyup", (event) => {
     })
     .catch((error) => {
       console.log(error);
-      alert("Oops, something went wrong !");
+      // alert("Oops, something went wrong !");
     });
 });
 
