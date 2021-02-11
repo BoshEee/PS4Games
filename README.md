@@ -24,8 +24,10 @@ We built this project to practice more and dive more into Node.js and the back-e
 # Diagram
 ![](https://i.imgur.com/Qn4Dxm1.png)
 
-
- 
+# Feature To Add :
+1. Admins Panel
+2. Users can comment on games and blogs
+3. Users can create blogs
 
 # Team Work
 
