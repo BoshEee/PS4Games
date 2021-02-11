@@ -3,7 +3,7 @@
 
 PS gamers, now you can search and find and know more about ps4 exclusives to know more, read more about each game! 
 
-
+[App Docs](https://docs.google.com/document/d/17Qlv56IbI3pAg8zyGiG-lsYckieECJIB3ce90M1SYdM/edit?usp=sharing)
 Check it out !
 
 # Why?
