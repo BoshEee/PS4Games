@@ -16,18 +16,14 @@ function homeHandler(request, response) {
   });
 }
 
-function gamesHome(request, response) {
-  getAllGames()
+function gamesHome(req, response) {
+  db.query(`SELECT title,poster FROM games`)
     .then((result) => {
-      response.writeHead(200, { "content-type": "application/json" });
-      console.log(result);
-      response.write(JSON.stringify(result));
-      response.end();
+      response.end(JSON.stringify(result.rows));
     })
-    .catch((error) => {
-      response.writeHead(200, { "content-type": "text/html" });
-      response.end(`<h1>Something went wrong \n ${error.message}</h1>`);
-      console.log(error);
+    .catch((e) => {
+      missingHandler(req, response);
+      console.log("Error at gameInfo handler");
     });
 }
 

@@ -14,6 +14,7 @@ const poster = document.querySelector("#poster");
 const price = document.querySelector("#price");
 const release = document.querySelector("#release");
 const summary = document.querySelector("#summary");
+const rate = document.querySelector("#rate");
 
 // Event Listener
 searchBtn.addEventListener("click", getinfo);
@@ -56,25 +57,26 @@ function getinfo(event) {
     let game = searchInput.value;
     console.log("btn : " + game);
 
-    fetch(`/ps4/?name=${game}`)
+    fetch(`/getgame/?name=${game}`)
       .then((response) => {
         if (!response.ok) throw new Error(response.status);
         return response.json();
       })
       .then((result) => {
-        console.log(result);
+        console.log("this : " + result);
         if (result.length == 0) {
           alert("Sorry, Game Not Found");
         } else {
-          // homepage.style.display = "none";
-          // screenshotsBox.innerHTML = "";
-          // info.style.display = "grid";
-          title.textContent = result[0].name;
+          homepage.style.display = "none";
+          screenshotsBox.innerHTML = "";
+          info.style.display = "grid";
+          title.textContent = result[0].title;
           genres.textContent = "Genres : " + result[0].genres;
-          poster.src = result[0].images;
+          poster.src = result[0].poster;
           price.textContent = "Price : " + result[0].price;
-          release.textContent = "Release : " + result[0].release;
-          summary.textContent = "Summary : " + result[0].summary;
+          release.textContent = "Release : " + result[0].release_date;
+          rate.textContent = "Rate : " + result[0].rate;
+          summary.textContent = "Summary : " + result[0].game_summa;
 
           for (let i = 0; i < 3; i++) {
             let screenshots = document.createElement("img");
@@ -93,13 +95,15 @@ function getinfo(event) {
 }
 
 function showGames() {
-  fetch(`getGames`)
+  fetch(`/home`)
     .then((response) => {
       if (!response.ok) throw new Error(response.status);
       return response.json();
     })
     .then((result) => {
-      console.log(result);
+      for (let i = 0; i < 10; i++) {
+        console.log("this : " + result[i].title);
+      }
     })
     .catch((error) => {
       console.log(error);
@@ -107,4 +111,4 @@ function showGames() {
     });
 }
 
-// showGames();
+showGames();

@@ -8,6 +8,7 @@ const blogHandler = require("./Handlers/blog");
 const gameInfo = require("./Handlers/gameInfo");
 const loginHandler = require("./Handlers/login");
 const signinHandler = require("./Handlers/signin");
+const gameInfoHandler = require("./Handlers/getInfo");
 
 function router(request, response) {
   const url = request.url;
@@ -18,6 +19,10 @@ function router(request, response) {
     publicHandler(request, response);
   } else if (url.includes("/ps4")) {
     searchHandler(request, response);
+  } else if (url.includes("/home")) {
+    homeHandler.gamesHome(request, response);
+  } else if (url.includes("/getgame/?name=")) {
+    gameInfoHandler(request, response);
   } else if (url.includes("/search")) {
     getByGenreHandler(request, response);
   } else if (url.includes("/signup") && request.method === "GET") {
