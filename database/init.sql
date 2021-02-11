@@ -48,10 +48,9 @@ INSERT INTO users (user_name, user_pass, role) VALUES
 
 INSERT INTO blog (user_id, blog_title, blog_dec, post_body, tags) VALUES 
 
-('1', 'Nice website', 'Well done', 'Nice design 1', 'general'),
-('4', 'Nice Game', 'Well done', 'Nice design 1', 'games'),
-('2', 'Level 4', 'Well done', 'Nice design 1', 'questions'),
-('3', 'codm question', 'Well done', 'Nice design 1', 'questions')
+('1', 'How To Play Video Games', 'quick tut about how to play video game', 'Easy, buy a console and some games and just play.', 'tutorial'),
+('4', 'Best Game Of 2020?', 'Do you wanna know what was the best game at 2020?', 'The Last Of Us 2 of course!', 'games'),
+('2', 'Tomb Raider Collection', 'Map', 'Journals : 20 | Bones : 10 | Caches : 50', 'questions')
 
 ;
 

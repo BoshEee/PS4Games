@@ -11,16 +11,21 @@ fetch(`feed`)
       let postDiv = document.createElement("div");
       let postTitle = document.createElement("h3");
       let postBody = document.createElement("p");
+      let postTags = document.createElement("i");
+      let line = document.createElement("hr");
 
-      postTitle.textContent = result[0].blog_title;
-      postBody.textContent = result[0].post_body;
+      postTitle.textContent = "Post Title : " + result[i].blog_title;
+      postBody.textContent = result[i].post_body;
+      postTags.textContent = "Tags : " + result[i].tags;
 
       pageBody.appendChild(postDiv);
       postDiv.appendChild(postTitle);
       postDiv.appendChild(postBody);
+      postDiv.appendChild(postTags);
+      postDiv.appendChild(line);
     }
   })
   .catch((error) => {
     console.log(error);
-    alert("Oops, something went wrong !");
+    alert("something went wrong !");
   });
